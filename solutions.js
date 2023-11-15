@@ -21,3 +21,71 @@
  * concat
  */
 
+// Question 1
+function isTrue(input){
+    return input===true;
+}
+function isFalse(input) {
+    return input ===false;
+}
+
+function isEven(input){
+    return input === true;
+}
+
+function isEqual(input){
+   return input === true;
+}
+
+function addOne(num) {
+    if (typeof num === 'string') {
+        num = parseInt(num);
+    }
+    return num + 1;
+}
+
+function not(value) {
+    return !value;
+}
+
+JavaScript
+
+function and(value1, value2) {
+    if (typeof value1 !== 'boolean' || typeof value2 !== 'boolean') {
+        throw new TypeError('Both arguments must be of type Boolean');
+    }
+    return value1 && value2;
+}
+
+function concat(...args) {
+    return args.join('');
+}
+const result = concat('hello', 'world');
+console.log(result);
+
+function or(value1, value2) {
+    if (value1 || value2) {
+        return true;
+    }
+    return false;
+}
+
+function isIdentical(value1, value2) {
+    return value1 === value2;
+}
+
+
+const isEven = (input) => {
+    if (
+        typeof input === 'number' || typeof input === 'string' && !isNaN(input)
+    ) {
+        return input % 2 === 0;
+    }
+    return false;
+
+
+
+
+
+
+
